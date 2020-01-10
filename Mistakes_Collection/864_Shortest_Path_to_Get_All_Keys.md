@@ -1,4 +1,4 @@
-#864. Shortest Path to Get All Keys
+# 864. Shortest Path to Get All Keys
 
 这一道题目虽然别人整理的分类是bfs，但是我看了一下之后觉得这不应该是dfs吗，只是加了key而已，于是就写了个dfs的解，两个测试用例通过了，但是提交后还是wa，一看错误例子，才发现原来是需要回溯，因为这里并没有假定走到某个点就不能往回了，而dfs在遍历的时候基本是不访问visited的点的。
 

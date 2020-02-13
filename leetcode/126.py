@@ -46,3 +46,7 @@ class Solution:
 # 那么只需要把该level里的所有前继节点记录下来即可。 
 # 最后关于打印全部数列，想到了用递归的方法，这样的话代码比较简单，不需要手动写loop遍历各种边界情况。
 # 很快就AC了，还是比较有成就感:)
+
+# 发现答案里有一个巧妙的python comprehension不用递归的方法返回全部数列，感觉很巧妙
+#     while res and res[0][0] != start:
+#        res = [[p]+r for r in res for p in parents[r[0]]]

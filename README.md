@@ -3,3 +3,21 @@
 
 # Problem List
 https://docs.google.com/spreadsheets/d/1SbpY-04Cz8EWw3A_LBUmDEXKUMO31DBjfeMoA0dlfIA/edit#gid=1257533002
+https://oi-wiki.org/
+
+## Project Euler
+https://projecteuler.net/
+
+## Eculidea 
+https://www.euclidea.xyz/
+
+## Algorithm Visualization
+https://visualgo.net/en
+
+# Notes
+学数学对于做软件工程到底有没有用，如果只是说数学训练中的解高数题，推公式之类，那么在软件工程的工作中确实从未遇到，但是数学训练依然在软件工程中发挥巨大作用。
+那就是数学训练带来的抽象思维和逻辑思维能力，在软件工程中，需要不断面对看不见摸不着的抽象概念。
+https://www.researchgate.net/publication/220425264_The_real_reason_why_software_engineers_need_math
+Keith Devlin
+
+

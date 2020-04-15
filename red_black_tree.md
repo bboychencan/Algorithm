@@ -1,6 +1,12 @@
 
 # Red Black Tree, RBTree
 
+https://ivanzz1001.github.io/records/post/data-structure/2018/06/24/ds-red-black-tree#11-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84
+
+https://blog.csdn.net/xiazhiyiyun/article/details/76641752
+
+https://www.cxyxiaowu.com/7374.html
+
 红黑树的大名早就如雷贯耳，但是从未在教科书中学到过。 一开始在考研的时候接触到平衡二叉树（更多地叫法是AVL树）。
 二叉平衡树的思想比较容易理解，想要维护一个二叉搜索树，且保持树是平衡的，即左右高度差不超过1，这样的话，很自然地
 想到在进行插入或者删除操作的时候，需要做一些“手脚”，把树重新调整成平衡的状态。最早是在考研的时候接触到，没有

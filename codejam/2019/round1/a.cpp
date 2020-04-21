@@ -11,8 +11,8 @@ int main() {
   cin.tie(0);
   mt19937 rng(5);
   vector<int> prec[22][22];
-  for (int h = 2; h <= 20; h++) {
-    for (int w = 2; w <= 20; w++) {
+  for (int h = 2; h <= 19; h++) {
+    for (int w = 2; w <= 19; w++) {
       vector<vector<int>> g(h * w);
       for (int i = 0; i < h; i++) {
         for (int j = 0; j < w; j++) {
@@ -32,7 +32,7 @@ int main() {
       vector<int> res;
       vector<int> was(h * w, 0);
       function<void(int, int)> dfs = [&](int cnt, int v) {
-        if (!res.empty()) {≠≠
+        if (!res.empty()) {
           return;
         }
         cur.push_back(v);

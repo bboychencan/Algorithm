@@ -5,7 +5,19 @@ from itertools import permutations
 from itertools import combinations
 from collections import Counter
 
+
+def dfs(cnt, u):
+
 def test_case():
+	
+	r, c = list(map(int, input().spilt))
+	g = [[[] for i in range(c)] for i in range(r)]
+	for i in range(r):
+		for j in range(c):
+			for ii in range(r):
+				for jj in range(c):
+					if(i !+ ii and j != jj and i - j != ii - jj and i + j != ii + jj):
+						g[i*c + j].append(ii * w + jj)
 
 
 

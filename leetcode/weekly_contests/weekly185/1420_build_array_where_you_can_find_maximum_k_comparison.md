@@ -29,7 +29,7 @@ class Solution:
             if arrlen == 1:
                 dp[arrlen][lgst][cost] = 1 if cost == 1 else 0
                 return dp[arrlen][lgst][cost]
-            if cost == 0:
+            if cost == 0:					
                 dp[arrlen][lgst][cost] = 0
                 return 0
             else:
@@ -48,6 +48,8 @@ class Solution:
 ```
 
 看了排名前几的答案都是用了bottom-up的方法，不知道是因为效率更高还是实现起来更快。尝试自己写一下，对比一下。
-```
+```python
+class Solution:
+    def numOfArrays(self, n: int, m: int, k: int) -> int:
 
 ```

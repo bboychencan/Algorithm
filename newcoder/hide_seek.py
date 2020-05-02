@@ -15,7 +15,7 @@ res = None
 count = 0
 
 while q:
-	n = len(q)
+	n = len(q)mer
 	res = set(q)
 	# print(res)
 	for i in range(n):

@@ -1,6 +1,6 @@
 # Heap lazy loading
 
-5180. Constrained Subset Sum
+5180. Constrained Subset Sum (1425. Constrained Subsequence Sum)
 
 This problem requires me to maintain a max heap of a k-length moving window. Therefore, I need to remove the last element from the heap
 whenever the window slides, however, it's not easy to determine whether the last element is the max value or not. which mean the heap.pop 
@@ -38,3 +38,6 @@ class Solution:
         # print(dp)
         return res
 ```
+
+# 单调队列优化dp
+这种方法时间复杂度更低O(n), 更加优美

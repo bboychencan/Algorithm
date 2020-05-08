@@ -8,6 +8,14 @@ from collections import Counter
 N = 0
 M = 0
 
+
+def ext_eucli(a, b, c):
+	if b == 1:
+
+def crt(a, r):
+
+
+
 def test_case():
 	spades = [5, 7, 9, 11, 13, 16, 17]
 	r = [0 for i in range(7)]

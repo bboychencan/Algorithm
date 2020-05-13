@@ -1,0 +1,201 @@
+n is : 1
+
+n is : 2
+
+n is : 3
+
+n is : 4
+
+n is : 5
+
+n is : 6
+
+n is : 7
+
+n is : 8
+
+n is : 9
+
+n is : 10
+
+n is : 11
+
+n is : 12
+
+n is : 13
+
+n is : 14
+
+n is : 15
+
+n is : 16
+
+n is : 17
+
+n is : 18
+
+n is : 19
+
+n is : 20
+
+n is : 21
+
+n is : 22
+
+n is : 23
+
+n is : 24
+
+n is : 25
+
+n is : 26
+
+n is : 27
+
+n is : 28
+
+n is : 29
+
+n is : 30
+
+n is : 31
+
+n is : 32
+
+n is : 33
+
+n is : 34
+
+n is : 35
+
+n is : 36
+
+n is : 37
+
+n is : 38
+
+n is : 39
+
+n is : 40
+
+n is : 41
+
+n is : 42
+
+n is : 43
+
+n is : 44
+
+n is : 45
+
+n is : 46
+
+n is : 47
+
+n is : 48
+
+n is : 49
+
+n is : 50
+
+n is : 51
+
+n is : 52
+
+n is : 53
+
+n is : 54
+
+n is : 55
+
+n is : 56
+
+n is : 57
+
+n is : 58
+
+n is : 59
+
+n is : 60
+
+n is : 61
+
+n is : 62
+
+n is : 63
+
+n is : 64
+
+n is : 65
+
+n is : 66
+
+n is : 67
+
+n is : 68
+
+n is : 69
+
+n is : 70
+
+n is : 71
+
+n is : 72
+
+n is : 73
+
+n is : 74
+
+n is : 75
+
+n is : 76
+
+n is : 77
+
+n is : 78
+
+n is : 79
+
+[0, 5, 6, 6, 4, 7, 9, 6, 10, 7, 7, 9, 10, 13, 9, 5, 4, 0, 2, 5, 4] 0 17 [(2, 18), (4, 4), (5, 15), (4, 16), (4, 20), (9, 6), (6, 3), (5, 1), (5, 19), (7, 5), (9, 11), (10, 12), (13, 13), (9, 14), (6, 7), (10, 8), (6, 2), (7, 9), (7, 10)]
+n is : 80
+
+n is : 81
+
+n is : 82
+
+n is : 83
+
+n is : 84
+
+n is : 85
+
+n is : 86
+
+n is : 87
+
+n is : 88
+
+n is : 89
+
+n is : 90
+
+n is : 91
+
+n is : 92
+
+n is : 93
+
+n is : 94
+
+n is : 95
+
+n is : 96
+
+n is : 97
+
+n is : 98
+
+n is : 99
+
+n is : 100
+

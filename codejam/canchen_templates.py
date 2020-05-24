@@ -123,7 +123,7 @@ def shortestPathBinaryMatrix(self, grid: List[List[int]]) -> int:
     return -1
 
 # Extcrt
-# 
+
 # Bezout Lemma
 # ax + by = gcd(a, b)
 
@@ -215,61 +215,56 @@ def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List
 
 
 # Union Find
-def findRedundantDirectedConnection(self, edges: List[List[int]]) -> List[int]:
-        parents = [-1] * len(edges)
-        rank = [1] * len(edges)
-        visited = [0] * len(edges)
-        error1 = []
-        error2 = []
-        
-        def find(k: int):
-            if parents[k] == -1:
-                return k
-            parents[k] = find(parents[k])
-            return parents[k]
-        
-        def union(a: int, b: int) -> bool:
-            roota = find(a)
-            rootb = find(b)
-            if roota == rootb:
-                return False
-            if rank[roota] > rank[rootb]:
-                parents[rootb] = roota
-            elif rank[roota] < rank[rootb]:
-                parents[roota] = rootb
-            else:
-                parents[roota] = rootb
-                rank[rootb] += 1
-            return True
-        
-        for x, y in edges:
-            if visited[y - 1] == 1:
-                error2 = [x - 1, y - 1]
-            visited[y - 1] = 1
-        if error2 == []:
-            for x, y in edges:
-                if not union(x - 1, y - 1):
-                    return [x, y]
+## Union find with array
+def unionfind():
+    parents = [-1] * len(edges)
+    rank = [1] * len(edges)
+    
+    def find(k: int):
+        if parents[k] == -1:
+            return k
+        parents[k] = find(parents[k])
+        return parents[k]
+    
+    def union(a: int, b: int) -> bool:
+        roota = find(a)
+        rootb = find(b)
+        if roota == rootb:
+            return False
+        if rank[roota] > rank[rootb]:
+            parents[rootb] = roota
+        elif rank[roota] < rank[rootb]:
+            parents[roota] = rootb
         else:
-            iscircle = False
-            for x, y in edges:
-                if [x - 1, y -1] == error2:
-                    continue
-                elif y - 1 == error2[1]:
-                    error1 = [x -1, y - 1]
-                if not union(x - 1, y - 1):
-                    iscircle = True
-                    break
+            parents[roota] = rootb
+            rank[rootb] += 1
+        return True
 
-            if iscircle:
-                return [error1[0] + 1, error1[1] + 1]
-            else:
-                return [error2[0] + 1, error2[1] + 1]
-
-
+## Union find with dict
+def unionfind_dict():
+    parents = defaultdict(int)
+    rank = defaultdict(int)
+    
+    def find(k):
+        if parents[k] == 0:
+            return k
+        parents[k] = find(parents[k])
+        return parents[k]
+    
+    def union(a, b):
+        roota = find(a)
+        rootb = find(b)
+        if roota == rootb:
+            return False
+        if rank[roota] > rank[rootb]:
+            parents[rootb] = roota
+        elif rank[roota] < rank[rootb]:
+            parents[roota] = rootb
+        else:
+            parents[roota] = rootb
+            rank[rootb] += 1
 
 # Minmax
-
 def miniMaxScore(i, j, wantMax=True):
 	if i > j: return 0
 	if wantMax:
@@ -286,3 +281,27 @@ def miniMaxScore(i, j, wantMax=True):
 	        -piles[j] + miniMaxScore(i, j - 1, True),
 	    )
 	    return minScore[i][j]
+
+
+## Computational Geometry
+# Valid Square
+def validSquare(self, p1: List[int], p2: List[int], p3: List[int], p4: List[int]) -> bool:
+    # Check the distance of every two points, there should be 
+    # 4 equal smaller edges, and 2 equal larger edges
+    lines = []
+    points = [p1, p2, p3, p4]
+    for pa, pb in combinations(points, 2):
+        x1, y1 = pa
+        x2, y2 = pb
+        d = (x2-x1) ** 2 + (y2-y1) ** 2
+        lines.append(d)
+    lines = sorted(lines)
+    
+    return 0 < lines[0] == lines[1] == lines[2] == lines[3] < lines[4] == lines[5]
+
+# Check if three points are straignt line using slope
+def validstraightline(p1, p2, p3):
+    dx = p2[0] - p1[0]
+    dy = p2[1] - p1[1]
+
+    return dx * (p3[1] - p2[1]) == dy * (p3[0] - p2[0])

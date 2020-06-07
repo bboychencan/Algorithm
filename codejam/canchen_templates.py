@@ -283,8 +283,8 @@ def miniMaxScore(i, j, wantMax=True):
 	    return minScore[i][j]
 
 
-## Computational Geometry
-# Valid Square
+# Computational Geometry
+## Valid Square
 def validSquare(self, p1: List[int], p2: List[int], p3: List[int], p4: List[int]) -> bool:
     # Check the distance of every two points, there should be 
     # 4 equal smaller edges, and 2 equal larger edges
@@ -299,9 +299,29 @@ def validSquare(self, p1: List[int], p2: List[int], p3: List[int], p4: List[int]
     
     return 0 < lines[0] == lines[1] == lines[2] == lines[3] < lines[4] == lines[5]
 
-# Check if three points are straignt line using slope
+## Check if three points are straignt line using slope
 def validstraightline(p1, p2, p3):
     dx = p2[0] - p1[0]
     dy = p2[1] - p1[1]
 
     return dx * (p3[1] - p2[1]) == dy * (p3[0] - p2[0])
+
+## Get distance of two points
+def getDis(p1, p2):
+
+    a = (p1[0] - p2[0]) ** 2
+    b = (p1[1] - p2[1]) ** 2
+    return math.sqrt(a + b)
+
+## Calculate the area of triangle
+def areaOfTriangle(p1, p2, p3):
+    # Vector product 
+    # Area = 1/2 * abs(AB * AC)
+    #      = 0.5 * abs(xa*yb + xb*yc + xc*ya - xa*yc - xc*yb - xb*ya)
+    return 0.5 * abs(p1[0] * p2[1] + p2[0] * p3[1] + p3[0] * p1[1] - p1[0] * p3[1] - p3[0] * p2[1] - p2[0] * p1[1])
+
+# Topological Sorting
+# 很久没用，已经写不出来了，整理一个模板，方便以后回忆, 1136
+## Kahn's algorithm
+
+## dfs algorithma

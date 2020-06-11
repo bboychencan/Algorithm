@@ -1,4 +1,27 @@
-## BIT
+# Special DP
+## Ugly Number
+##  find the n-th ugly number. Ugly numbers are positive numbers whose prime factors only include 2, 3, 5
+def nthUglyNumber(self, n: int) -> int:
+    ugly = [0] * n
+    ugly[0] = 1
+    prod2, prod3, prod5 = 2, 3, 5
+    idx2, idx3, idx5 = 0, 0, 0
+    
+    for i in range(1, n):
+        ugly[i] = min(prod2, prod3, prod5)
+        if ugly[i] == prod2:
+            idx2 += 1
+            prod2 = ugly[idx2] * 2
+        if ugly[i] == prod3:
+            idx3 += 1
+            prod3 = ugly[idx3] * 3
+        if ugly[i] == prod5:
+            idx5 += 1
+            prod5 = ugly[idx5] * 5
+        
+    return ugly[n-1]
+
+# BIT
 def __init__(self, nums: List[int]):
 	self.nums = [0] + nums[::]
 	n = len(self.nums)

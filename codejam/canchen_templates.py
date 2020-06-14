@@ -20,6 +20,9 @@ def nthUglyNumber(self, n: int) -> int:
             prod5 = ugly[idx5] * 5
         
     return ugly[n-1]
+## LCA, use binary lifting to save reduce the time complexity from n to log(n)
+def lca():
+    pass
 
 # BIT
 def __init__(self, nums: List[int]):

@@ -44,6 +44,44 @@ def getKthAncestor(self, node: int, k: int) -> int:
         if temp == -1: return -1
     return temp
 
+## ST, sparse table, to solve Range Minimum Query
+def buildSparseTable(arr, n):
+    # Initialize M for intervals with length 1
+    lookup = 
+    for i in range(n):
+        lookup[i][0] = arr[0]
+
+    j = 1
+
+    while (1 << j) <= n:
+        # compute minimum value for all intervals with size 2^j
+        i = 0
+        while (i + (1 << j) - 1) < n:
+            if (lookup[i][j-1] < lookup[i + (1 << (j - 1))][j - 1]):
+                lookup[i][j] = lookup[i][j - 1]
+            else:
+                lookup[i][j] = lookup[i + (1 << (j - 1))][j - 1]
+            i += 1
+
+        j += 1
+
+def query(L, R):
+    # Find highest power of 2 that is smaller  
+    # than or equal to count of elements in  
+    # given range. For [2, 10], j = 3  
+    j = int(math.log2(R - L + 1))  
+  
+    # Compute minimum of last 2^j elements  
+    # with first 2^j elements in range.  
+    # For [2, 10], we compare arr[lookup[0][3]]  
+    # and arr[lookup[3][3]],  
+    if lookup[L][j] <= lookup[R - (1 << j) + 1][j]:  
+        return lookup[L][j]  
+  
+    else: 
+        return lookup[R - (1 << j) + 1][j]  
+
+
 # BIT
 def __init__(self, nums: List[int]):
 	self.nums = [0] + nums[::]

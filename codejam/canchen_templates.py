@@ -21,8 +21,28 @@ def nthUglyNumber(self, n: int) -> int:
         
     return ugly[n-1]
 ## LCA, use binary lifting to save reduce the time complexity from n to log(n)
-def lca():
-    pass
+def __init__(self, n: int, parent: List[int]):
+    self.n = n
+    # 20 ~= log(n)
+    self.dp = [[-1 for i in range(20)] for i in range(n)]
+    
+    for i in range(n):
+        self.dp[i][0] = parent[i]
+    for j in range(1, 20):
+        for i in range(n):
+            if self.dp[i][j-1] == -1:
+                self.dp[i][j] = -1
+            else:
+                self.dp[i][j] = self.dp[self.dp[i][j-1]][j-1]
+    # print(self.dp)        
+    
+def getKthAncestor(self, node: int, k: int) -> int:
+    temp = node
+    for i in range(20):
+        if k & (1 << i) > 0:
+            temp = self.dp[temp][i]
+        if temp == -1: return -1
+    return temp
 
 # BIT
 def __init__(self, nums: List[int]):
@@ -57,7 +77,7 @@ def sumRange(self, i: int, j: int) -> int:
 	return res
 
 
-## Segment Tree
+# Segment Tree
 class SegTreeNode:
     def __init__(self, start, end, summ):
         self.start = start

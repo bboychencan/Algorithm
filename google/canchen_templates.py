@@ -258,7 +258,9 @@ def brute_force(a, n):
 		res *= a
 	return res
 
-# Tarjan
+
+# Graph Theory ========================================================
+## Tarjan SCC
 def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List[int]]:
         low = [float('inf')] * n
         dfn = [float('inf')] * n
@@ -297,6 +299,39 @@ def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List
         dfs(0)
         return self.res
 
+## MST minimum spanning tree
+## Kruskal, use Union Find
+
+def mst_weight(edges):
+    # edges, (a, b, c), a is from node, b is to node, c is weight
+    parent = [-1 for i in range(n + 1)]
+
+    def find(x):
+        if parent[x] == -1:
+            return x
+        parent[x] = find(parent[x])
+        return parent[x]
+
+    # sort all edges by weigth, check each edge one by one
+    edges = sorted(edges, key = lambda x: x[2])
+
+    # selected edges
+    select = []
+    # minimum weight
+    res = 0
+    for i in range(m):
+        a, b, w = edges[i]
+        # check the from node and to node, if they share same parent (belong to same group)
+        x = find(a)
+        y = find(b)
+        if x == y: continue
+        # if not, add this edge to selected edges, and union these two nodes
+        parent[x] = y
+        select.append((a, b))
+        res += w
+        if len(select) == n - 1:
+            return res
+    return -1
 
 # Union Find
 ## Union find with array

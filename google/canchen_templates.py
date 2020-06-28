@@ -442,5 +442,56 @@ def areaOfTriangle(p1, p2, p3):
 # Topological Sorting
 # 很久没用，已经写不出来了，整理一个模板，方便以后回忆, 1136
 ## Kahn's algorithm
+def topo_sort(n, graph):
+    q = []
+    # Calculate in_deg array
+    in_deg = [0] * (n)
+    pass 
 
-## dfs algorithma
+    # Push in all zero in_deg nodes
+    for i in range(n):
+        if in_deg[i] == 0:
+            q.push(i)
+    res = []
+
+    # Keep pushing in zero in_deg nodes and pop
+    while q:
+        top = q.pop()
+        res.append(top)
+        for node in graph[top]:
+            in_deg[node] -= 1
+            if in_deg[node] == 0:
+                q.push(node)
+
+    if len(res) == n:
+        return res
+    else:
+        return None
+## dfs algorithm
+def topo_sort(n, graph):
+    vis = [0] * n
+    res = []
+    # If there is an edge <u, v>, then v will always be visited 
+    # earlier then u, then proves the reverse order is a topological sort.
+    def dfs(u):
+        vis[u] = -1
+        for node in graph[u]:
+            # Check if there is cycle
+            if vis[node] == -1:
+                return False
+            elif vis[node] == 0:
+                dfs(node)
+        vis[u] = 1
+        res.append(u)
+        return True
+
+    # Visit nodes in reverse order 
+    for i in range(n):
+        if vis[i] == 0:
+            if not dfs(i):
+                return False
+
+    res = res[::-1]
+    return res
+
+

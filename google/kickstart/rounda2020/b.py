@@ -8,18 +8,25 @@ from collections import Counter
 import random
 
 def test_case():
-	n, b = list(map(int, input().split()))
-	prices = list(map(int, input().split()))
-	prices = sorted(prices)
-	res = 0
-	total = 0
+	n, k, p = list(map(int, input().split()))
+	arr = [None for i in range(n)]
 	for i in range(n):
-		if total + prices[i] <= b:
-			res += 1
-			total += prices[i]
-		else:
-			break
-	print(res)
+		arr[i] = list(map(int ,input().split()))
+
+	dp = [-1] * (p + 1)
+	dp[0] = 0
+
+	res = 0
+	for i in range(n):
+		for j in range(p, 0, -1):
+			temp = 0
+			for l in range(1, min(j, k) + 1):
+				temp += arr[i][l - 1]
+				if dp[j - l] == -1:
+					continue
+				else:
+					dp[j] =	max(dp[j], dp[j - l] + temp)
+	print(dp[p])
 
 
 def main():

@@ -403,7 +403,7 @@ def miniMaxScore(i, j, wantMax=True):
 
 
 # Computational Geometry
-## Calculate the geometric median
+## Calculate the geometric median, Weiszfeld algorithm
 ## https://en.wikipedia.org/wiki/Geometric_median
 
 def getMinDistSum(self, positions: List[List[int]]) -> float:

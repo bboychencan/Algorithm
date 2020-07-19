@@ -21,33 +21,6 @@
 
 我开始觉得，我不应该再花过多时间去学习新的复杂的数据结构，我应该同时把以前做过的所有题都保证会做，且能秒做。 否则曾经做过的题拿来仍然是一脸蒙比，那岂不是之前的练习都白练了吗。
 
-
-# 模板
-Here I provide a concise template that I summarize for the so-called "Overlapping Interval Problem", e.g. Minimum Number of Arrows to Burst Balloons, and Non-overlapping Intervals etc. I found these problems share some similarities on their solutions.
-
-Sort intervals/pairs in increasing order of the start position.
-Scan the sorted intervals, and maintain an "active set" for overlapping intervals. At most times, we do not need to use an explicit set to store them. Instead, we just need to maintain several key parameters, e.g. the number of overlapping intervals (count), the minimum ending point among all overlapping intervals (minEnd).
-If the interval that we are currently checking overlaps with the active set, which can be characterized by cur.start > minEnd, we need to renew those key parameters or change some states.
-If the current interval does not overlap with the active set, we just drop current active set, record some parameters, and create a new active set that contains the current interval.
-
-```
-int count = 0; // Global parameters that are useful for results.
-int minEnd = INT_MAX; // Key parameters characterizing the "active set" for overlapping intervals, e.g. the minimum ending point among all overlapping intervals.
-sort(points.begin(), points.end()); // Sorting the intervals/pairs in ascending order of its starting point
-for each interval {
-      if(interval.start > minEnd) { // If the 
-	 // changing some states, record some information, and start a new active set. 
-	count++;
-	minEnd = p.second;
-      }
-     else {
-	// renew key parameters of the active set
-	minEnd = min(minEnd, p.second);
-      } 
- }
-return the result recorded in or calculated from the global information;
-```
-
 ## 以后刷提侧重
 - 不做简单题
 - 只做高点赞题目
@@ -58,14 +31,7 @@ return the result recorded in or calculated from the global information;
 
 ## 区间最大覆盖
 
-## 无重叠区间最多个数
-1520. Maximum Number of Non-Overlapping Substrings
-这一题看完立刻知道要转换成无重叠区间最多个数的题目。 然后用贪心的方法去依次判断是否留下当前区间。
-可是这一题一开始的区间构造花了半天的时间没想清楚，而且这是一道medium题，一下把我信心打击完。
-
-后来看了结果，发现AC的也就100多人，心里平衡了一点，觉得自己智商还是正常。 
-不过发现discuss的答案竟然和我的思路基本完全一样，我最后没写出来感到很遗憾。 今天的状态也不是很好。
-中间变量命名也过于随意，导致后来修改的时候不断出bug
+## 无重叠区间
 
 ## 重叠区间个数
 

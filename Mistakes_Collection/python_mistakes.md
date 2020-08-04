@@ -58,3 +58,11 @@ Python scoping rules 101:
 1. a name bound in a function body is considered local unless explicitely declared global (Python 2.x and 3.x) or nonlocal (Python 3.x only). This holds true whereever the assignment happens in the function's body. Trying to read a local variable before it's bound is of course an error.
 2. if a name is read but not bound in a function's body, it will be looked up in enclosing scopes (outer function(s) if any then global scope). NB: functions arguments are de facto local names so they will never be looked up in enclosing scopes.
 一种可能的hack方法就是把这个变量用一个mutable变量包裹wrap the variable in a mutable，比如count  = [0]，这样就可以改变他。 所以也是为什么count不可以改，而其他数组变量可以改变
+
+
+#7 python random.choice
+python的set是不可以直接调用random choice的，必须要先转成tuple或者list，意味着这个操作是O(n)的。
+在使用python的时候，很多时候没有去关系底层的具体实现， 就是觉得set，list用这很爽，各种append，del，这样根本没有考虑
+底层的实现效率，这在算法面试的时候很不利。 面试官很容易会问这一个简单的操作底层的时间复杂度。
+
+所以练习算法还是老老实实地用java和c++

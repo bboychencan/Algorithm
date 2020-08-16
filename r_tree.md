@@ -20,7 +20,6 @@ geohash只擅长做点与点的距离计算，如果涉及到点，线，面之�
 
 
 Some of the advantages of geohash (comparing to r-tree) could be:
-
 - easy implementation
 - no performance degradation with growing number of features
 - proximity searches (partially true)

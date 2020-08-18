@@ -14,8 +14,9 @@
 ```
 
 - 240 Search a 2D Matrix II https://leetcode.com/problems/search-a-2d-matrix-ii/
-2020/02
+
 ```
+2020/02
 这次春节假期一下子隔了接近一个月没有刷题了，现在手非常的生疏，很多难度不高的题都需要花很长时间，脑子没有那么清晰了。感觉很慌，生怕之前花的那么多时间和精力都白废掉了。
 
 按分类刷题的时候遇到了这一类题，找第k个指，在排序的一维或二维数组上。 这道题之前做过，类似的题也做过好几道。可是时隔很久如今再重新做起来的时候，感觉非常的吃力。总记得是有一个小技巧在排序的2维矩阵中找到target值，但是一直捋不清楚这个思路，非常的慌张
@@ -26,15 +27,17 @@
 ```
 
 - 309 best time to buy and sell stock with cooldown https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/
-2020/05/13
+
 ```
+2020/05/13
 这一题四年前做不出来， 一直没有思路。
 2020/05/13 再看这道题目的时候，很快有了思路，应该就用dp，只是dp的转移方程稍微需要思考一下。
 ```
 
 - 312 Burst Balloons (hard) https://leetcode.com/problems/burst-balloons/
-2020/02/01
+
 ```
+2020/02/01
 这道题看完后觉得第一反应是用递归的dp，把整个数组序列作为key存到dp中，这样来减少重复计算，可是一想这个key长度会很大，感觉肯定不是最有办法。
 然后就没有思路了，想了几分钟感觉不知道如何找到更优的解，所以就放弃了。
 
@@ -55,8 +58,8 @@ dp[i][j] = max(dp[i][k] + dp[k][j] + nums[k] * nums[k-1] * nums[k + 1]) (k in n)
 
 ```
 
-2020/05/10
 ```
+2020/05/10
 ## Updates on 2020/05/10
 
 今天尝试做题目546. Remove Boxes时，看到discussion里面有人提到312和546是类似的题目，就转过来回看312之前的笔记，发现这一道题当时也是没有思路，只想着说把所有数组序列存入做key运用dp，但是很明显行不通，然后就没有思路了。
@@ -66,14 +69,16 @@ dp[i][j] = max(dp[i][k] + dp[k][j] + nums[k] * nums[k-1] * nums[k + 1]) (k in n)
 ```
 
 - 316 remove duplicate letters  https://leetcode.com/problems/remove-duplicate-letters/
-2020/05/13
+
 ```
+2020/05/13
 这道题4年前和2个月前都尝试过，但都失败了，2020/05/13 再次回看这道题的时候，很快就有了思路，这应该使用单调队列来存储之前的最长单调序列。只是这里的情况稍微有些复杂，需要判断的情况稍微复杂点，多花了点时
 ```
 
 - 327 Count of Range Sum https://leetcode.com/problems/count-of-range-sum/
-2020/04/28
+
 ```
+2020/04/28
 这一道题，猛一看不难，很快就有了O(n^2)的思路，但是很明显，这个方法会超时。
 然后开始仔细研究其中的规律，看看是否可以利用two pointers来优化这个搜索过程。
 想来想去，尝试了建立max、min数组，存储以当前坐标开头的所有数组的最大和和最小和，这个方法虽然可以减少一些判断，但整体上还是O(n^2)的。
@@ -86,8 +91,9 @@ dp[i][j] = max(dp[i][k] + dp[k][j] + nums[k] * nums[k-1] * nums[k + 1]) (k in n)
 ```
 
 - 335 Self Crossing https://leetcode.com/problems/self-crossing/submissions/
-2019/10/10
+
 ```
+2019/10/10
 这一题我花的时间有点久，主要是我整理的规律描述起来比较麻烦
 发现有几个发现了更精简的规律
 
@@ -110,14 +116,16 @@ x[i-1]+x[i-5]must bigger than or equal to x[i-3],x[i]+x[i-4]must bigger than or 
 ```
 
 - 336 palindrome pairs https://leetcode.com/problems/palindrome-pairs/
-2020/05/13
+
 ```
+2020/05/13
 这道题3个月前和6个月前都尝试过，失败了。 2020/05/13 又尝试了一下，发现不难，只要用hashmap存储一下某些前缀即可，写完后稍微调试了一下就AC了，感觉这段时间还是有进步的看来。
 ```
 
 -  373 find k pairs with smallest sums https://leetcode.com/problems/find-k-pairs-with-smallest-sums/
-2020/05/08
+
 ```
+2020/05/08
 I have tried solving this problem 7 months ago using a brute force way ...... and it worked ......
 (I learned a lesson, brute force does help me with learning algorithm at all)
 
@@ -144,8 +152,9 @@ This idea is a little tricky, it converts the problem into finding k-th value in
 ```
 
 - 381 Insert Delete GetRandom O(1) - Duplicates allowed https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/
-2020/05/13
+
 ```
+2020/05/13
 这一题考察对底层数据结构的了解。
 
 2年前尝试过这道题，没解出来，现在2020/05/13重新看这道题的时候，很快想到用python里面的counter去存储每个元素的频率。至于说随机抽样，查了一下，python里面有random.choices with weights，即可以根据weights来进行抽样。 可是这里面有一个问题，random.choices只能对支持indexing的结构操作。 而set本身不支持这个。
@@ -159,16 +168,18 @@ This idea is a little tricky, it converts the problem into finding k-th value in
 ```
 
 - 445 Add Two Numbers II https://leetcode.com/problems/add-two-numbers-ii/submissions/
-2020/02/11
+
 ```
+2020/02/11
 这一个题一看不难，有了第一想法就开始写，先计算两个链的长度，取较长的作为基准，然后相加等等。
 写着写着发现一些判断条件比较多，变得有些繁琐和不耐烦
 看了下高票答案，发现用stack的话问题就变得清晰很多。 这种题竟然没想到用stack做一下。
 ```
 
 - 478 generate random point in a circle https://leetcode.com/problems/generate-random-point-in-a-circle/
-2020/05/10
+
 ```
+2020/05/10
 This problem type is quite rare and interesting, it's a probability problem. 
 
 I quickly got the idea to use the polar coordinate to generate random R and 
@@ -178,8 +189,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 - 525 Contiguous Array https://leetcode.com/problems/contiguous-array/
-2019/11/26
+
 ```
+2019/11/26
 这一天一个月内先后尝试了两次，都失败了，看了答案之后发现本身并没有很难，只是用到了一个小的trick我从来没有遇到过。
 看到题目后第一反应是，这道题很像two pointers或者sliding window的题目，我开始琢磨通过移动前后两个指针或者从start和end开始把数组向内压缩，试图找到压缩过程中的规律从而可以把对数组的遍历从n^2次降低到n次。
 
@@ -202,8 +214,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 - 560 Subarray Sum Equals K https://leetcode.com/problems/subarray-sum-equals-k/
-2019/10/15
+
 ```
+2019/10/15
 这一道题，我2019/10/15做过，看了一下记录，发现当时知道了用map存储presum，不过貌似当时也是看了答案才知道的。
 因为我发现后来又做了一次提交，使用了扫描整个数组的笨方法，然后TLE。
 
@@ -213,8 +226,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 - 1546 maximum number of non-overlapping subarrays with sum equals target https://leetcode.com/problems/maximum-number-of-non-overlapping-subarrays-with-sum-equals-target/
-2020/08/10
+
 ```
+2020/08/10
 2020/08/10 在做 1546. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target 这道题的时候，我彻底懵逼了。 
 发现560 很类似，之前做过，但是似乎之前也没有直接想出来最优解，可能也是看了答案才会做的，所以并没有掌握这个题型。
 
@@ -222,8 +236,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 - 764 Largest Plus Sign https://leetcode.com/problems/largest-plus-sign/
-2019/11/09
+
 ```
+2019/11/09
 这道题，第一反应是做过类似的，但是用的就是普通的暴力解法，遍历整个grid，以每个点为中心扩散到最大记录下order。
 也可能是状态一般，没有特别想要去寻找最优解。
 稍微想了一下不知道有什么改进的方法。音乐想到了dp，但是没深挖。
@@ -235,8 +250,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 - 798 Smallest rotation with highest score https://leetcode.com/problems/smallest-rotation-with-highest-score/
-2020/02/13
+
 ```
+2020/02/13
 这道题第一反应就是一个O(n^2)的解，不过显然TLE
 琢磨了一会儿，感觉应该是每次移动，所有数值会改变1，但是没有继续深想，没有想出清楚的方法。
 然后就看了高票答案。 
@@ -257,8 +273,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 -  818 race car https://leetcode.com/problems/race-car/ 
-2020/03/10
+
 ```
+2020/03/10
 这道题猛一看似曾相似，大概是用二进制编码，然后求最优的变化序列。
 但是仔细想了一会发现二进制的规律似乎在这里用不到。还是要用dp。
 然后就开始写dp的方法。但是dp的方法有个问题，这里面的状态变化理论上来说有无穷种，如何去做pruning，这个想了很久。
@@ -278,8 +295,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 -  864 Shortest Path to Get All Keys https://leetcode.com/problems/shortest-path-to-get-all-keys/
-2019/12/23
+
 ```
+2019/12/23
 这一道题目虽然别人整理的分类是bfs，但是我看了一下之后觉得这不应该是dfs吗，只是加了key而已，于是就写了个dfs的解，两个测试用例通过了，但是提交后还是wa，一看错误例子，才发现原来是需要回溯，因为这里并没有假定走到某个点就不能往回了，而dfs在遍历的时候基本是不访问visited的点的。
 
 看了一下discuss，发现大家都在用bfs，也有提到A*的，才发现这是一类我没有怎么练过的题。
@@ -287,8 +305,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 - 943 Find the Shortest Superstring https://leetcode.com/problems/find-the-shortest-superstring/
-2020/04/03
+
 ```
+2020/04/03
 这一次的weekly前三道题我20分钟AC了，还在想这次的题有点简单。结果就在这一题上卡了1个小时没做出来。
 我面对这个题的时候发散了几个思路，最终还没想出答案，但是看了讨论之后发现我其中一条思路是正确的，记录一下我的思维过程
 1.第一反应是两两判断首尾是否有公共子串然后就可以合并了
@@ -322,8 +341,8 @@ After checking the discussion, I did estimate the probability carefully enough. 
 以后问题不仅需要给出最优解的值还需要给出最优路径的时候，一定要想到用path去存储最优路径的上一个结点，非常关键！
 ```
 
-2020/04/03
 ```
+2020/04/03
 ## Update on 2020/04/03
 时隔四个月再次遇到类似的题目，一时间没有思路，大概花费了1多分钟想到了这是一道旅行商问题，同时意识到似乎有些压缩的操作，但是由于这类题目练的少，想不出具体的解法。
 关键的是当时还不知道这类题目叫做状态压缩dp，在李煜东的书里有讲解过，这次算是打通了这个概念，加深了状态压缩的思想，剩下的就是再熟练梳理出最优子结构和状态转移方程。
@@ -332,8 +351,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 
 
 - 956 Tallest Billboard https://leetcode.com/problems/tallest-billboard/
-2019/11/21
+
 ```
+2019/11/21
 这道题猛一看还以为不难，标准的背包问题，稍微仔细想了下，感觉有点麻烦，需要拼出两个一样的长度而且有可能有剩余不用的rod，发现这个比较难捋清了。
 
 不过还是写了个背包方法，dp[i]里面存储拼接长度为i是的所有拼接组合，然后每次遍历的时候都判断i/2的所有组合情况，找出i和i/2里面没有共同元素的组合方式，然后就可以得到一个解。遍历完所有i，所有解中最大值即为答案，结果TLE。。。
@@ -349,8 +369,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 - 979 distribute coins in binary tree https://leetcode.com/problems/distribute-coins-in-binary-tree/
-2020/05/13
+
 ```
+2020/05/13
 这一道题，很久之前尝试过一次，没有捋出思路，当时试图梳理出最优转换的细节，在何种情况下如何转移可以实现最优。 可是发现情形有很多种，一种种对应的话会很复杂，最后就放弃了。
 
 时隔这么久，今天重新看这一道medium题，第一反应就是应该尝试用recursion的思路去解决这个问题，先从简单的case开始，如果只有一个root节点和一个left，一个right的时候该怎么判断。本来想着说先把每个subtree的元素个数计算出来，然后减去subtree的node总数用来作为需要迁移的元素的总个数。 后来发现其实在递归的过程中on the fly计算也是可以的。然后慢慢思路就清楚了，写完答案自己也有点惊讶一次就AC了。
@@ -358,8 +379,9 @@ After checking the discussion, I did estimate the probability carefully enough. 
 ```
 
 - 1049 Last Stone Weight II https://leetcode.com/problems/last-stone-weight-ii/
-2019/11/12
+
 ```
+2019/11/12
 这一题，一个月内连续两次尝试都没有想出好的解决方案。
 我的思路大概如下
 1.脑子里没发找到一个最优子结构
@@ -389,8 +411,9 @@ Then you can see that depending on the order of the subtractions, we get a diffe
 ```
 
 - 1145 Binary Tree Coloring Game https://leetcode.com/problems/binary-tree-coloring-game/
-2019/11/05
+
 ```
+2019/11/05
 这一题AC了，花的时间半小时左右，不是很满意。
 
 最开始看的时候有点紧张，担心要用到图的一些理论，比如联通路径，桥之类。简单记录一下我的思维过程
@@ -422,8 +445,9 @@ Then you can see that depending on the order of the subtractions, we get a diffe
 ```
 
 - 1246 palindrome removal https://leetcode.com/problems/palindrome-removal/
-2020/05/13
+
 ```
+2020/05/13
 这是一道dp题，很容易看出来，但是如何剥离出来状态转移方程就比较困难，思考了好久都找不到答案。我一直尝试用最后一次剥离的区间来做边界划分问题，但是发现始终没有办法整齐地把问题剥离开。
 
 有时候又同时把两种剥离方法混淆在一起，一会想着用dp存储a,b区间的最有解，一会儿又想是否可以利用最后一次range的边界信息来剥离问题。 可是一直没有捋清楚，最后这道题还是没有做出来。
@@ -436,8 +460,9 @@ Then you can see that depending on the order of the subtractions, we get a diffe
 ```
 
 - 1255 Maximum Score Words Formed by Letters https://leetcode.com/problems/maximum-score-words-formed-by-letters/
-2019/11/10
+
 ```
+2019/11/10
 这道题其实很快有了思路，感觉是一个比较复杂的背包问题，因为资源有限，每个letter的个数是固定的，而“物品”就是word，每个word花费的资源不同，也就是对26种letter的消费量不同，把word想成物品，构建一个26维的背包，每个维度表示一个letter的资源量。 这种方法感觉应该没有问题。
 可是implement起来遇到很大的麻烦，从来没有构建过26维的矩阵，尝试用26维的tuple来做key，但发现也会比较麻烦。对于python自带的permutation的库不熟悉。
 
@@ -448,8 +473,9 @@ Then you can see that depending on the order of the subtractions, we get a diffe
 ```
 
 - 1261 Find Elements in a Contaminated Binary Tree https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/
-2019/11/17
+
 ```
+2019/11/17
 这一题是weekly 163的第二道题，在我第一道题以前200名的速度成功提交后，还有点沾沾自喜。结果这一道题阴沟里翻船。
 首先第一反应这道题比较直白，没有多少弯子。
 1.初始化无非就是一个递归，很简单
@@ -467,8 +493,9 @@ Then you can see that depending on the order of the subtractions, we get a diffe
 ```
 
 - 1284 Minimum Number of Flips to Convert Binary Matrix to Zero Matrix https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/
-2019/12/08
+
 ```
+2019/12/08
 这一道leetcode的周赛题，看完题目后，5分钟内就有了思路，觉得是到简单题，用二进制压缩，做一个dfs即可。
 
 然后不到10分钟就写出了第一个版本，
@@ -491,8 +518,9 @@ debug的时候遇到几个点，直接没有那么清楚。
 ```
 
 - 1367 Linked List in Binary Tree https://leetcode.com/problems/linked-list-in-binary-tree/
-2020/03/01
+
 ```
+2020/03/01
 这一题在周赛中，很快想到了用递归的方法，但是一提交前几个例子都没错，结果一个很长的测试样例出了错误。
 这一下子就僵住了，从代码上我怎么也没看出问题，而测试样例又给不出我有用的信息。
 
@@ -518,8 +546,9 @@ debug的时候遇到几个点，直接没有那么清楚。
 2020/05/10
 
 - 1439 find the kth smallest sum of matrix with sorted rows https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/
-2020/05/03
+
 ```
+2020/05/03
 I failed this problem in 2020/05/03 weekly contest, I skipped the 3rd problem and started to solve this one directly, I was confident enough 
 to solve it, but after spent around 1 hour, still could not figure out the trick and estimate how many combinations there are in total.
 
@@ -531,8 +560,9 @@ I mistook for the concept of selecting one item from each row and calculate the 
 ```
 
 - 1453 maximum number of darts inside of a circular dartboard https://leetcode.com/problems/maximum-number-of-darts-inside-of-a-circular-dartboard/
+
+
 2020/05/17
-```
 这一道题猛一看，似乎像是之前做过的，但再细看发现不是。 我尝试着遍历平面上所有的点，然后以
 该点为圆心，计算此圆包含的点数，结果超时了。
 然后感觉找不到思路，从来没有正式做过这一类的几何题，有点没有头绪，网上查了一下看看有一种
@@ -545,11 +575,12 @@ n^3的方法，然后看了下题目的数据大小，发现应该没问题。
 判断==的情况。
 
 以后要适当练习一下计算几何类的题目。
-```
+
 
 - 1262 Greatest Sum Divisible by Three https://leetcode.com/problems/greatest-sum-divisible-by-three/
-2019/11/17
+
 ```
+2019/11/17
 这一题一开始用dp，但是写了个两层循环，每次都和之前所有元素的情况做了一次对比，结果导致超时，当时也是一下子心态差点崩。而事实上如果稍微仔细想一下的话就知道因为在意的只有除3余数的三种情况，0，1，2，根具体之前的某个数值关系并不大，只需要每次更新这个0，1，2的数组，用最当下最大值替代即可，从头遍历实在是多此一举，直接导致TLE。
 
 反思一下，做题不能过于盲目的使用套路，竟可能先想想最优解。 而这一题主要是没想到连dp都会TLE

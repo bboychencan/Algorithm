@@ -37,3 +37,6 @@ def binary_search(array) -> int:
 
 - https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 - https://leetcode.com/problems/split-array-largest-sum/ （这题之前试过，总是TLE，放弃了。。。）
+- https://leetcode.com/problems/koko-eating-bananas/submissions/
+- https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/submissions/ （这道题AC了，但是不确定当时是不是看答案AC的）
+- https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/ （这道题挂了很多次）

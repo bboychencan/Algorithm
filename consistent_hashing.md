@@ -3,6 +3,9 @@
 canssandra集群里面就用到了，主要作用是保证数据库访问可以均匀地分摊到不同的node节点，而且在节点增删变动的情况下一样能保持
 一种均匀的分摊这个原则。
 
+lintcode
+- https://www.lintcode.com/problem/consistent-hashing/description?_from=ladder&&fromId=172
+- https://www.lintcode.com/problem/consistent-hashing-ii/?_from=ladder&&fromId=172
 
 ## 普通hash的缺点
 - 不方便扩展 普通的hash是采用链表数组来实现的，数组长度是固定的，但是如果一个节点被移除了，或者有新添加的节点，那么就需要
